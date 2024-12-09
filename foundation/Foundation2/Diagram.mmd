@@ -28,7 +28,7 @@ classDiagram
     class Customer {
         +name : string
         +address : Address
-        +LivesInUSA() : bool
+        +LivesInSomewhere() : bool
     }
 
     class Address {
@@ -36,6 +36,6 @@ classDiagram
         +city : string
         +stateOrProvince : string
         +country : string
-        +IsInUSA() : bool
+        +IsInSomewhere() : bool
         +GetFullAddress() : string
     }

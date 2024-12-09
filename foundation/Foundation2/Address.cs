@@ -13,9 +13,9 @@ public class Address
         this.country = country;
     }
 
-    public bool IsInUSA()
+    public bool IsInSomewhere()
     {
-        return country.ToLower() == "usa";
+        return country.ToLower() == "place";
     }
 
     public string GetFullAddress()

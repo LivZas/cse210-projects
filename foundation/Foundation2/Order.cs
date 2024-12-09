@@ -5,7 +5,7 @@ public class Order
 {
     private List<Product> products;
     private Customer customer;
-    private const double USA_ShippingCost = 5.0;
+    private const double Country_ShippingCost = 5.0;
     private const double International_ShippingCost = 35.0;
 
     public Order(Customer customer)
@@ -28,7 +28,7 @@ public class Order
             total += product.TotalCost();
         }
 
-        double shippingCost = customer.LivesInUSA() ? USA_ShippingCost : International_ShippingCost;
+        double shippingCost = customer.LivesInSomewhere() ? Country_ShippingCost : International_ShippingCost;
         total += shippingCost;
 
         return total;

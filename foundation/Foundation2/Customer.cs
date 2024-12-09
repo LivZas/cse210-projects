@@ -9,9 +9,9 @@ public class Customer
         this.address = address;
     }
 
-    public bool LivesInUSA()
+    public bool LivesInSomewhere()
     {
-        return address.IsInUSA();
+        return address.IsInSomewhere();
     }
 
     public string Name => name;
