@@ -1,0 +1,21 @@
+classDiagram
+    Program --> Video : "creates"
+    Video --> Comment : "has"
+    
+    class Program {
+        +Main() : void
+    }
+
+    class Video {
+        +Title : string
+        +Author : string
+        +LengthInSeconds : int
+        +Comments : List<Comment>
+        +AddComment(comment : Comment) : void
+        +GetNumberOfComments() : int
+    }
+
+    class Comment {
+        +CommenterName : string
+        +Text : string
+    }
