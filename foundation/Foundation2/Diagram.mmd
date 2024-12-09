@@ -1,0 +1,41 @@
+classDiagram
+    Program --> Order : "creates"
+    Order --> Product : "contains"
+    Order --> Customer : "contains"
+    Customer --> Address : "has"
+
+    class Program {
+        +Main() : void
+    }
+
+    class Product {
+        +Name : string
+        +ProductId : string
+        +Price : double
+        +Quantity : int
+        +TotalCost() : double
+    }
+
+    class Order {
+        +products : List<Product>
+        +customer : Customer
+        +AddProduct(product : Product) : void
+        +TotalCost() : double
+        +GetPackingLabel() : string
+        +GetShippingLabel() : string
+    }
+
+    class Customer {
+        +name : string
+        +address : Address
+        +LivesInUSA() : bool
+    }
+
+    class Address {
+        +streetAddress : string
+        +city : string
+        +stateOrProvince : string
+        +country : string
+        +IsInUSA() : bool
+        +GetFullAddress() : string
+    }
